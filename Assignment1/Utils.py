@@ -22,10 +22,32 @@ def plotBivar(mu, cov):
     plt.show()
 
 
-def plotCurves(yVals):
-    x = np.arange(len(yVals[0]))
-    for y in yVals:
-        plt.plot(x, y)
+def plotCurves(xVals, yValsArr):
+    # x = np.arange(len(yValsArr[0]))
+    for yVals in yValsArr:
+        plt.plot(xVals, yVals)
+    plt.show()
+
+
+def plotCurvesWithPoints(xVals, yValsArr, pointsX, pointsY, variance=None):
+    assert len(pointsX) == len(pointsY)
+    for yVals in yValsArr:
+        plt.plot(xVals, yVals, zorder=0)
+
+    for i in range(len(pointsX)):
+        # print("x: ", pointsX[i], ", y: ", pointsY[i])
+        plt.scatter(pointsX, pointsY, zorder=1, color='black')
+
+    if variance is not None:
+        mean = yValsArr[0]
+        print("Var: ", variance)
+        plt.fill_between(xVals, mean + 2 * np.sqrt(variance), mean - 2 * np.sqrt(variance), color="black", alpha=0.2)
+
+    # plt.title("GP Posterior")
+    # plt.title("GP Posterior, Predictive Certainty")
+    plt.title("GP Posterior, Predictive Certainty, Noise")
+    plt.xlabel("x")
+    plt.ylabel("y")
     plt.show()
 
 

@@ -2,9 +2,9 @@ import numpy as np
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 
-from Utils import plotBivar, plotLines, plotCurves
+from Utils import plotBivar, plotLines, plotCurves, plotCurvesWithPoints
 
-NUM_DATAPOINTS = 1001  # 201
+NUM_DATAPOINTS = 501  # 201
 SIGMA_GEN = 1
 SIGMA = 1
 TAU = 1
@@ -32,6 +32,7 @@ def generateData2():
 # sigma is likelihood variance in t
 # tau is prior variance in weights
 # x, t are vectors
+# posterior over W
 def findPosterior(x, t, sigma, tau):
     sigmaSquareInverse = (1 / (sigma ** 2))
     xTranspose = np.transpose(x)
@@ -44,22 +45,46 @@ def findPosterior(x, t, sigma, tau):
     return mu, sigmaMatrixInverse
 
 
-def priorGP(x, sigma, l):
+def kernel(x1, x2, sigma, l):
     k = []
-    for i in range(len(x)):
-        diff = (x[i] - x)
+    for i in range(len(x1)):
+        diff = (x1[i] - x2)
         exponent = diff * diff / (l * l)
         newRow = sigma * np.exp(- exponent)
         k.append(newRow)
-    # print(np.array(k))
-    return np.zeros(len(x)), np.array(k)
+
+    return np.array(k)
+
+
+def priorGP(x, sigma, l):
+    k = kernel(x, x, sigma, l)
+    return np.zeros(len(x)), k
+
+
+def posteriorGP(x, xPredict, f, sigma, l):
+    invKernelX = np.linalg.inv(kernel(x, x, sigma, l) + np.identity(len(x)) * 0.05)
+    mean = kernel(xPredict, x, sigma, l) @ invKernelX @ f.reshape(-1, 1)
+    cov = kernel(xPredict, xPredict, sigma, l) - \
+          kernel(xPredict, x, sigma, l) @ invKernelX @ kernel(x, xPredict, sigma, l)
+    # for i in range(len(cov)):
+        # cov[i][i] += 0.05
+    return mean, cov
 
 
 # plotPrior()
 x, t = generateData2()
-muGP, kGP = priorGP(x, 1, 2)
-sample = np.random.multivariate_normal(muGP, kGP, 10)
-plotCurves(sample)
+xPredict = np.linspace(-10, 10, NUM_DATAPOINTS)
+x = x[0:8]
+t = t[0:8]
+# muGP, kGP = priorGP(x, 1, 0.5)
+# sample = np.random.multivariate_normal(muGP, kGP, 2)
+muPost, kPost = posteriorGP(x, xPredict, t, 1, 1)
+# print(np.round(muPost, 3))
+# print(np.round(kPost, 3))
+sample = np.random.multivariate_normal(np.transpose(muPost)[0], kPost, 10)
+# plotCurves(xPredict, [sample])
+# plotCurvesWithPoints(xPredict, sample, x, t)
+plotCurvesWithPoints(xPredict, np.transpose(muPost), x, t, variance=np.diag(kPost))
 '''
 mu, sigma = findPosterior(x, t.reshape(-1, 1), SIGMA, TAU)
 muRow = [mu[0][0], mu[1][0]]
