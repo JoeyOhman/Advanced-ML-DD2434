@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e0dcb4-9a6a-4b9b-b190-afb05f641242" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RepLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,9 +21,11 @@
     <session id="-1362933246">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,32 +41,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="py" value="6136" />
+          <entry key="py" value="6151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="6136" />
+          <entry key="Python" value="6151" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LinearRegression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="330">
               <caret line="19" column="19" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1575684442446" expanded="true" signature="232:321" ph="..." />
-                <marker date="1575684442446" expanded="true" signature="594:751" ph="..." />
-                <marker date="1575684442446" expanded="true" signature="1333:2079" ph="..." />
-                <marker date="1575684442446" expanded="true" signature="1365:1570" ph="..." />
-                <marker date="1575684442446" expanded="true" signature="1595:2079" ph="..." />
-                <marker date="1575684442446" expanded="true" signature="1786:2079" ph="..." />
               </folding>
             </state>
           </provider>
@@ -74,11 +69,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="902">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1575834180503" expanded="true" signature="910:1476" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,15 +81,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RepLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2046">
-              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+            <state relative-caret-position="22">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1575842365911" expanded="true" signature="174:555" ph="..." />
-                <marker date="1575842365911" expanded="true" signature="440:444" ph="..." />
-                <marker date="1575842365911" expanded="true" signature="858:863" ph="..." />
-                <marker date="1575842365911" expanded="true" signature="858:2222" ph="..." />
-                <marker date="1575842365911" expanded="true" signature="1588:1895" ph="..." />
+                <marker date="1576006979989" expanded="true" signature="174:545" ph="..." />
+                <marker date="1576006979989" expanded="true" signature="436:440" ph="..." />
+                <marker date="1576006979989" expanded="true" signature="690:997" ph="..." />
               </folding>
             </state>
           </provider>
@@ -140,6 +132,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,7 +144,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,7 +153,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -250,17 +242,9 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14089069" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14574899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Bucklescript" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Statistic" weight="0.3291815" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.29715303" />
@@ -268,12 +252,20 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Remote Host" weight="0.32955465" />
-      <window_info anchor="right" auto_hide="true" x="177" y="130" width="927" height="421" id="SciView" show_stripe_button="false" type="FLOATING" weight="0.7506073" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Bucklescript" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Statistic" order="11" weight="0.3291815" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32955465" />
+      <window_info anchor="right" auto_hide="true" x="177" y="130" width="927" height="421" id="SciView" order="4" show_stripe_button="false" type="FLOATING" weight="0.7506073" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,33 +282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1575834180503" expanded="true" signature="910:1476" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LinearRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1575684442446" expanded="true" signature="232:321" ph="..." />
-            <marker date="1575684442446" expanded="true" signature="594:751" ph="..." />
-            <marker date="1575684442446" expanded="true" signature="1333:2079" ph="..." />
-            <marker date="1575684442446" expanded="true" signature="1365:1570" ph="..." />
-            <marker date="1575684442446" expanded="true" signature="1595:2079" ph="..." />
-            <marker date="1575684442446" expanded="true" signature="1786:2079" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/linalg/linalg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -324,17 +289,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepLearning.py">
+    <entry file="file://$PROJECT_DIR$/LinearRegression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="330">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1575842365911" expanded="true" signature="174:555" ph="..." />
-            <marker date="1575842365911" expanded="true" signature="440:444" ph="..." />
-            <marker date="1575842365911" expanded="true" signature="858:863" ph="..." />
-            <marker date="1575842365911" expanded="true" signature="858:2222" ph="..." />
-            <marker date="1575842365911" expanded="true" signature="1588:1895" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepLearning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1576006979989" expanded="true" signature="174:545" ph="..." />
+            <marker date="1576006979989" expanded="true" signature="436:440" ph="..." />
+            <marker date="1576006979989" expanded="true" signature="690:997" ph="..." />
           </folding>
         </state>
       </provider>
