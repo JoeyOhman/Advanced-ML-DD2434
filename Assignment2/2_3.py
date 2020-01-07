@@ -156,26 +156,26 @@ def calculate_likelihood(tree_topology, theta, beta):
         tree_topology[nodeIdx] = int(tree_topology[nodeIdx])
 
     '''
-    print("************")
-    print("************")
-    print("************")
-    print(s(3, 2, tree_topology, theta, beta))
-    print("************")
-    print("************")
-    print("************")
-    '''
     totalLikelihood = 1
     for nodeIdx in range(len(tree_topology)):
         if not np.isnan(beta[nodeIdx]):  # leaf
             leafLikelihood = t(nodeIdx, beta[nodeIdx], tree_topology, theta, beta)
             totalLikelihood += np.log(leafLikelihood)
             print("Likelihood for node:", nodeIdx, ":", leafLikelihood)
+    '''
+    firstLeaf = -1
+    for nodeIdx in range(len(tree_topology)):
+        if not np.isnan(beta[nodeIdx]):  # leaf
+            firstLeaf = nodeIdx
+            break
 
-    print("Total log-likelihood:", totalLikelihood)
-    print("Total likelihood:", np.exp(totalLikelihood))
+    totalLikelihood = t(firstLeaf, beta[firstLeaf], tree_topology, theta, beta)
+
+    print("Total likelihood:", totalLikelihood)
+    # print("Total likelihood:", np.exp(totalLikelihood))
     # End: Example Code Segment
 
-    return np.exp(totalLikelihood)
+    return totalLikelihood
 
 
 def main():
@@ -190,14 +190,24 @@ def main():
     t.load_tree(filename)
     t.print()
 
-    print("\n2. Calculate likelihood of each FILTERED sample\n")
-    # These filtered samples already available in the tree object.
-    # Alternatively, if you want, you can load them from corresponding .txt or .npy files
+    print("\n2. Calculate likelihood "
+          "of each FILTERED sample\n")
+    # These filtered samples already
+    # available in the tree object.
+    # Alternatively, if you want, you can
+    # load them from corresponding
+    # .txt or .npy files
 
     for sample_idx in range(t.num_samples):
         beta = t.filtered_samples[sample_idx]
         print("\n\tSample: ", sample_idx, "\tBeta: ", beta)
-        sample_likelihood = calculate_likelihood(t.get_topology_array(), t.get_theta_array(), beta)
+        global sDict
+        sDict = {}
+        global tDict
+        tDict = {}
+        sample_likelihood = calculate_likelihood(t.get_topology_array(),
+                                                 t.get_theta_array(),
+                                                 beta)
         print("\tLikelihood: ", sample_likelihood)
 
 
